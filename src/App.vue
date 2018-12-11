@@ -2,7 +2,7 @@
 #app
   .people-list
     people(
-      v-for="n in 24"
+      v-for="n in 32"
       :key="n"
       :num="n - 1"
       :direction="direction"

@@ -12,7 +12,7 @@ export default {
     },
     speed: {
       type: Number,
-      default: 500
+      default: 100
     },
     direction: {
       type: String,
@@ -31,8 +31,8 @@ export default {
       if (step === 3) step = 1
       let x = 0
       let y = 0
-      let imageIndex = ~~(num / 6) + 1
-      switch (num % 6) {
+      let imageIndex = ~~(num / 8) + 1
+      switch (num % 8) {
         case 1:
           x = 144
           break
@@ -40,15 +40,22 @@ export default {
           x = 288
           break
         case 3:
-          y = 192
+          x = 432
           break
         case 4:
           y = 192
-          x = 144
           break
         case 5:
           y = 192
+          x = 144
+          break
+        case 6:
+          y = 192
           x = 288
+          break
+        case 7:
+          y = 192
+          x = 432
           break
       }
       switch (direction) {
